@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Eczar:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Eczar", serif;
+}
+
+.page-start {
+  height: 100vh;
+  width: 100vw;
+  background: no-repeat;
+  background-size: contain;
+  background-image: url("/assets/picture/fon.png");
+  background-position: center;
+}
+
+.page-start__wrapper {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.landing-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.landing-text__title {
+  font-size: 60px;
+  color: #61c9ff;
+}
+
+.landing-text__text {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.image {
+  height: 25px;
+  padding-left: 5px;
+}
+
+.page-start__btn {
+  height: 45px;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.btn {
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  
+}
+
+.btn:hover{
+  transform: scale(1.25);
+  box-shadow: 2px 2px 2px 1px;
+}
+
+.btn-inseruction{
+  width: 180px;
+  background-color: #87CEEB;
+  border: 1px solid #4682B4;
+  box-shadow: 1px 1px 1px 1px  #87CEEB;
+}
+
+.btn-start{
+  width: 100px;
+  background-color: #32CD32;
+  border: 1px solid #228B22;
+  box-shadow: 1px 1px 1px 1px #32CD32;
+}
