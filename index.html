@@ -11,7 +11,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="page-start">
+    <section class="page-start hide">
       <div class="page-start__wrapper">
         <div class="landing-text">
           <span class="landing-text__title">Raindrops</span>
@@ -22,9 +22,40 @@
         </div>
 
         <div class="page-start__btn">
-          <button class="btn-inseruction btn">How to play <img src="/assets/picture/question.png" alt="?" class="image-question image"></button>
-          <button class="btn-start btn">Play <img src="/assets/picture/star.png" alt="star" class="image-star image"></button>
+          <button class="btn-instruction btn">
+            How to play
+            <img
+              src="/assets/picture/question.png"
+              alt="?"
+              class="image-question image"
+            />
+          </button>
+          <button class="btn-start btn">
+            Play
+            <img
+              src="/assets/picture/star.png"
+              alt="star"
+              class="image-star image"
+            />
+          </button>
         </div>
+      </div>
+    </section>
+
+    <section class="game-page">
+      <div class="game-page__wrapper">
+        <div class="action">
+          <div class="action__bg">
+            <div class="wave">
+              <div class="wave3 hide"></div>
+              <div class="wave2 hide"></div>
+              <div class="wave1 hide"></div>
+              <div class="wave0"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="control"></div>
       </div>
     </section>
   </body>
