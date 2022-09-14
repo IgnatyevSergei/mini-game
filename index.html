@@ -11,7 +11,7 @@
     <title>Document</title>
   </head>
   <body>
-    <section class="page-start hide">
+    <section class="page-start " id="page-start">
       <div class="page-start__wrapper">
         <div class="landing-text">
           <span class="landing-text__title">Raindrops</span>
@@ -42,30 +42,30 @@
       </div>
     </section>
 
-    <section class="game-page">
+    <section class="game-page hide" id="game-page">
       <div class="game-page__wrapper">
         <div class="action">
           <div class="action__bg">
             <div class="wave">
-              <div class="wave3  ">
+              <div class="wave3 hide">
                 <div class="wave0_1"></div>
                 <div class="wave0_2"></div>
                 <div class="wave0_3"></div>
                 <div class="wave0_4"></div>
               </div>
-               <div class="wave2 supportWave ">
+              <div class="wave2 hide">
                 <div class="wave0_1"></div>
                 <div class="wave0_2"></div>
                 <div class="wave0_3"></div>
                 <div class="wave0_4"></div>
               </div>
-              <div class="wave1 supportWave ">
+              <div class="wave1 hide">
                 <div class="wave0_1"></div>
                 <div class="wave0_2"></div>
                 <div class="wave0_3"></div>
                 <div class="wave0_4"></div>
               </div>
-              <div class="wave0 supportWave ">
+              <div class="wave0">
                 <div class="wave0_1"></div>
                 <div class="wave0_2"></div>
                 <div class="wave0_3"></div>
@@ -76,8 +76,39 @@
           </div>
         </div>
 
-        <div class="control"></div>
+        <div class="control">
+          <div class="control__wrapper">
+            <div class="scoreboard">
+              <input type="text" class="input"/>
+            </div>
+            <div class="keyboard">
+              <div class="keyboard__numbers">
+                <div class="keyboard__numbers-enter">
+                  <button class="num_btn">7</button>
+                  <button class="num_btn">8</button>
+                  <button class="num_btn">9</button>
+                  <button class="num_btn">4</button>
+                  <button class="num_btn">5</button>
+                  <button class="num_btn">6</button>
+                  <button class="num_btn">1</button>
+                  <button class="num_btn">2</button>
+                  <button class="num_btn">3</button>
+                </div>
+                <div class = "keyboard__numbers-delete">
+                  <button class="num_btn-zero">0</button>
+                  <button class="num_btn-delete">delete</button>
+                </div>
+              </div>
+              <div class="keyboard__enter-btn">
+                <button class="num_btn-clear">clear</button>
+                <button class="num_btn-clear">enter</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+
+    <script src="script.js" type="module"></script>
   </body>
 </html>

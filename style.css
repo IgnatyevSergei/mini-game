@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Eczar", serif;
 }
-
+/* =============first page=============== */
 .page-start {
   height: 100vh;
   width: 100vw;
@@ -85,9 +85,9 @@
   box-shadow: 1px 1px 1px 1px #32cd32;
 }
 
+/* =================second page=================== */
 .game-page {
   margin: 0 auto;
-  box-sizing: border-box;
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
@@ -136,16 +136,6 @@
   background-color: #0ff;
 }
 
-.wave0 {
-  width: 100%;
-  position: relative;
-  bottom: -8%;
-  height: 9%;
-
-  display: flex;
-  flex-direction: row;
-}
-
 .wave0_1,
 .wave0_2,
 .wave0_3,
@@ -153,14 +143,17 @@
   height: 50%;
   width: 300%;
   background-color: #0ff;
-  box-shadow: -2px -3px rgb(123, 231, 222);
+  box-shadow: -1px -2px rgb(123, 231, 222);
   border-radius: 50%;
-  animation: waveAction 2s linear infinite;
+  animation: waveAction 5s linear infinite;
 }
 
+.wave0_3,
+.wave0_1 {
+  animation: waveAction2 3s linear infinite;
+}
 
-
-
+.wave0,
 .wave1,
 .wave2,
 .wave3 {
@@ -168,18 +161,6 @@
   position: relative;
   display: flex;
   flex-direction: row;
-}
-
-.wave1 {
-  bottom: -8%;
-  height: 9%;
-}
-.wave2 {
-  bottom: -8%;
-  height: 9%;
-}
-
-.wave3 {
   bottom: -8%;
   height: 9%;
 }
@@ -192,21 +173,134 @@
 
 @keyframes waveAction {
   0% {
-    transform: rotate(-5deg);
+    transform: rotate(-1deg);
   }
   50% {
-    transform: rotate(5deg);
+    transform: rotate(0deg);
+    transform: scale(1.5);
+    box-shadow: -1px -3px rgb(39, 209, 195);
   }
 
   100% {
-    transform: rotate(-5deg);
+    transform: rotate(-1deg);
+  }
+}
+
+@keyframes waveAction2 {
+  0% {
+    transform: rotate(1deg);
+    transform: scale(1.1);
+  }
+  50% {
+    transform: rotate(0deg);
+    transform: scale(1.5);
+    box-shadow: -1px -3px rgb(39, 209, 195);
+  }
+
+  100% {
+    transform: rotate(1deg);
   }
 }
 
 .control {
   width: 25%;
-  height: 100%;
+  height: 100vh;
   background-image: url("/assets/picture/controlFon.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.control__wrapper {
+  width: 70%;
+  height: 50%;
+  border: 2px solid #603000;
+  background-color: #964b00;
+  border-radius: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  margin-top: 3px;
+  width: 97%;
+  height: inherit;
+  font-size: 40px;
+}
+
+.keyboard {
+  width: 98%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  padding-top: 3px;
+}
+
+.keyboard__numbers {
+  width: 74%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+}
+
+.keyboard__numbers-enter {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard__numbers-delete {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  padding-top: 3px;
+  justify-content: space-around;
+}
+
+.num_btn {
+  width: 30%;
+  height: auto;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.num_btn-zero {
+  width: 63%;
+  height: 100%;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.num_btn-delete {
+  width: 31%;
+  height: 100%;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.keyboard__enter-btn {
+  width: 25%;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.num_btn-clear {
+  width: 100%;
+  height: 50%;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 .hide {
