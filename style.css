@@ -219,13 +219,19 @@
   border: 1px solid black;
   position: relative;
   bottom: 26%;
-  background-color: #87ceeb;
+  background-color: #c7fcec;
 
   display: flex;
   justify-content: center;
   align-items:flex-end;
   border-radius: 40%;
+  font-size: 2.5rem;
+  color: #603000;
  
+}
+
+.score_text{
+  font-size: 2.5rem;
 }
 
 
