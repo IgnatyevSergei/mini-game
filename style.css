@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Eczar", serif;
+  font-size: 10px;
 }
 /* =============first page=============== */
 .page-start {
@@ -34,12 +35,12 @@
 }
 
 .landing-text__title {
-  font-size: 60px;
+  font-size: 6rem;
   color: #61c9ff;
 }
 
 .landing-text__text {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-style: italic;
 }
 
@@ -58,7 +59,7 @@
 }
 
 .btn {
-  font-size: 22px;
+  font-size: 2.2rem;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -209,7 +210,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
+.score{
+  width: 70%;
+  height: 15%;
+  border: 1px solid black;
+  position: relative;
+  bottom: 26%;
+  background-color: #87ceeb;
+
+  display: flex;
+  justify-content: center;
+  align-items:flex-end;
+  border-radius: 40%;
+ 
+}
+
+
+
 
 .control__wrapper {
   width: 70%;
@@ -232,14 +252,13 @@
   margin-top: 3px;
   width: 97%;
   height: inherit;
-  font-size: 40px;
+  font-size: 4rem;
 }
 
 .keyboard {
   width: 98%;
   height: 75%;
   display: flex;
-  justify-content: center;
   padding-top: 3px;
 }
 
@@ -252,8 +271,7 @@
 
 .keyboard__numbers-enter {
   display: flex;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
@@ -270,22 +288,34 @@
 .num_btn {
   width: 30%;
   height: auto;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
+}
+
+.num_btn:hover {
+  background-color: #c7fcec;
 }
 
 .num_btn-zero {
   width: 63%;
   height: 100%;
-  font-size: 20px;
+  font-size: 2rem;
   cursor: pointer;
+}
+
+.num_btn-zero:hover {
+  background-color: #c7fcec;
 }
 
 .num_btn-delete {
   width: 31%;
   height: 100%;
-  font-size: 15px;
+  font-size: 1.5rem;
   cursor: pointer;
+}
+
+.num_btn-delete:hover {
+  background-color: #c7fcec;
 }
 
 .keyboard__enter-btn {
@@ -300,7 +330,11 @@
   width: 100%;
   height: 50%;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1.5rem;
+}
+
+.num_btn-clear:hover {
+  background-color: #c7fcec;
 }
 
 .hide {
