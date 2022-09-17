@@ -259,6 +259,8 @@
   width: 97%;
   height: inherit;
   font-size: 4rem;
+  text-align: right;
+  color: black;
 }
 
 .keyboard {
