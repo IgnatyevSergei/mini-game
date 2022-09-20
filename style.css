@@ -213,7 +213,7 @@
   flex-direction: column;
 }
 
-.score{
+.score {
   width: 70%;
   height: 15%;
   border: 1px solid black;
@@ -223,19 +223,15 @@
 
   display: flex;
   justify-content: center;
-  align-items:flex-end;
+  align-items: flex-end;
   border-radius: 40%;
   font-size: 2.5rem;
   color: #603000;
- 
 }
 
-.score_text{
+.score_text {
   font-size: 2.5rem;
 }
-
-
-
 
 .control__wrapper {
   width: 70%;
@@ -347,4 +343,53 @@
 
 .hide {
   display: none;
+}
+
+/*======================= ball ================*/
+
+.ball {
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: 0;
+  border: 2px solid #4682b4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #61c9ff;
+  animation: ballDown 15s;
+}
+
+@keyframes ballDown{
+  from {
+    margin-top: 0%
+    
+  }
+
+  to {
+    margin-top: 30%
+    
+  }
+}
+
+.numbers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  width: 50%;
+}
+
+.number {
+  font-size: 2rem;
+}
+
+.sign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
+  width: 50%;
+  font-size: 2rem;
 }
