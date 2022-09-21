@@ -12,7 +12,7 @@ export class ControlComponent extends Component {
     );
 
     this.scoreboard = this.component.querySelector(".input");
-    console.log(this.scoreboardValue);
+  
 
     this.deletBtn = this.component.querySelector(".num_btn-delete");
 
@@ -36,8 +36,6 @@ export class ControlComponent extends Component {
 function pressNumberHandler(e) {
   e.preventDefault();
   this.scoreboard.value += e.target.textContent;
-
-  console.log(this.scoreboard.value.length);
 
 }
 

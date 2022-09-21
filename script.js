@@ -8,3 +8,4 @@ export const landingPage = new PageStartComponent ('page-start')
 export const pageGame = new PageGameComponent("game-page");
 
 export const controler = new ControlComponent("control");
+

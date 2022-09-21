@@ -1,4 +1,5 @@
 import { Component } from "./core/component.js";
+import { renderBall } from "./template/render-ball.js";
 
 export class PageGameComponent extends Component {
     constructor (id) {
@@ -6,6 +7,6 @@ export class PageGameComponent extends Component {
     }
 
     init () {
-        
+        this.rander = setInterval(renderBall, 0)
     }
 }
