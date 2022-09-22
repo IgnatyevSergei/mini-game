@@ -1,7 +1,6 @@
 import { pageGame } from "../script.js";
 import { Component } from "./core/component.js";
 
-
 class PageStartComponent extends Component {
   constructor(id) {
     super(id);
@@ -9,20 +8,19 @@ class PageStartComponent extends Component {
 
   init() {
     this.btn = this.component.querySelectorAll(".btn");
-    this.btn.forEach(btn => btn.addEventListener('click', changeHandler.bind(this)))
+    this.btn.forEach((btn) =>
+      btn.addEventListener("click", changeHandler.bind(this))
+    );
   }
 }
- 
-function changeHandler (e) {
-e.preventDefault()
-if(e.target.classList.contains('btn-start')){
-   pageGame.show()  
-   this.hide()  
-   
-    
 
-        
-}
+function changeHandler(e) {
+  e.preventDefault();
+  if (e.target.classList.contains("btn-start")) {
+    pageGame.show();
+    this.hide();
+    pageGame.gameStart()
+  }
 }
 
 export default PageStartComponent;

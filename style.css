@@ -359,18 +359,18 @@
   align-items: center;
   justify-content: center;
   background-color: #61c9ff;
-  animation: ballDown 15s;
+  animation: ballDown 20s ease-in;
 }
 
 @keyframes ballDown{
-  from {
+  0% {
     margin-top: 0%
     
   }
 
   to {
-    margin-top: 30%
-    
+    margin-top: 30%;
+    visibility: hidden;
   }
 }
 

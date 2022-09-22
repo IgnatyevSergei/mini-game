@@ -1,3 +1,4 @@
+
 export const renderBall = () => {
   function randomInteger(min, max) {
     let rand = min + Math.random() * (max - min);
