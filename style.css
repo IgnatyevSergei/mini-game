@@ -345,6 +345,8 @@
   display: none;
 }
 
+
+
 /*======================= ball ================*/
 
 .ball {
@@ -393,4 +395,8 @@
   height: 90%;
   width: 50%;
   font-size: 2rem;
+}
+
+.hide-ball{
+  display: none;
 }
