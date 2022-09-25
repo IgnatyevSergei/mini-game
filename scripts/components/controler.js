@@ -7,7 +7,7 @@ export class ControlComponent extends Component {
   }
 
   init() {
-    this.score = this.component.querySelector(".score_text");
+    this.score = this.component.querySelector(".score_text-input");
 
     this.numBtn = this.component.querySelectorAll(".btn_numbers");
     this.numBtn.forEach((num) =>
@@ -25,6 +25,8 @@ export class ControlComponent extends Component {
 
     this.enterBtn = this.component.querySelector(".num_btn-enter");
     this.enterBtn.addEventListener("click", enterNumberHandler.bind(this));
+
+    this.curent = 0;
   }
 }
 
@@ -47,14 +49,13 @@ function clearNumberHandler() {
   this.scoreboard.value = "";
 }
 
-function enterNumberHandler(e) {
-  e.preventDefault();
-  if (this.scoreboard.value === window.calculationBall){
+function enterNumberHandler() {
+  if (this.scoreboard.value === window.calculationBall) {
     this.ball = document.getElementById("ball");
-    this.ball.classList.add('hide-ball')
+    this.ball.classList.add("hide-ball");
     this.scoreboard.value = "";
-    this.score +=10
-    pageGame.gameStart()
+    this.curent += 10;
+    this.score.value = this.curent;
+    pageGame.gameStart();
   }
-    ;
 }
