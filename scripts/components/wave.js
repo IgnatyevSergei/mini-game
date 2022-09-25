@@ -15,7 +15,7 @@ export class WaveComponent extends Component {
     console.log(this.wave2);
     console.log(this.wave3);
 
-    this.settingWave =  waveUp;
+    this.settingWave =  waveUp.bind(this);
   }
 }
 
