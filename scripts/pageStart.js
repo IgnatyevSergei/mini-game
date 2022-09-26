@@ -20,6 +20,7 @@ function changeHandler(e) {
     pageGame.show();
     this.hide();
     pageGame.gameStart()
+    
   }
 }
 

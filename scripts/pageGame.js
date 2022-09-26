@@ -9,25 +9,15 @@ export class PageGameComponent extends Component {
 
   init() {
     this.wrapper = this.component.querySelector(".game-page__wrapper");
-    
     this.renderBalOnPage = () => {
       this.wrapper.insertAdjacentHTML("afterend", renderBall());
       window.calculationBall =
         document.getElementById("ball").dataset.calculation;
-      this.setWaveUp = setTimeout(wave.settingWave, 15000)
-      
+      this.setWaveUp = setTimeout(wave.settingWave, 20000);
     };
-
-    
-
-    
 
     this.gameStart = () => {
       this.renderBalOnPage();
-      
     };
-
-    
   }
 }
-

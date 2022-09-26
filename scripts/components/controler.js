@@ -56,6 +56,9 @@ function enterNumberHandler() {
     this.scoreboard.value = "";
     this.curent += 10;
     this.score.value = this.curent;
+    clearTimeout(pageGame.setWaveUp);
     pageGame.gameStart();
+    
+    
   }
 }
