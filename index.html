@@ -79,7 +79,7 @@
         <div class="control" id="control">
           <div class="score">
             <span class="score_text"
-              >score:
+              >Score:
               <input
                 type="text"
                 maxlength="5"
@@ -119,8 +119,18 @@
         </div>
       </div>
     </section>
-
-
+    <div class="hide" id = 'modal'>
+      <div class="modal-container">
+      <h2 class="modal__notice">
+        Your score
+        <span class="modal__notice-name">${totalScore}</span>
+      </h2>
+      <div class="modal__actions">
+        <button class="modal__btn" id = 'modal__btn-strat'>New game</button>
+        <button class="modal__btn" id = 'modal__btn-exit'>Exit</button>
+      </div>
+    </div>
+    </div>
 
     <script src="script.js" type="module"></script>
   </body>

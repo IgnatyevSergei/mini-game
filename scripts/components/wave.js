@@ -1,6 +1,6 @@
-import { pageGame } from "../../script.js";
+import { modal, pageGame } from "../../script.js";
 import { Component } from "../core/component.js";
-import { renderModal } from "../template/render-modal.js";
+
 
 export class WaveComponent extends Component {
   constructor(id) {
@@ -17,32 +17,34 @@ export class WaveComponent extends Component {
     this.settingWave =  waveUp.bind(this);
 
     
+    
 
   }
 }
 
-// function finishGame() {
-  
-// }
+
+
+
 
 function waveUp() {
 this.ball = document.getElementById("ball");
   if (!this.wave0.classList.contains("supportWave")) {
-    
     this.wave0.classList.add("supportWave");
     this.wave1.classList.remove("hide");
-    ball.classList.add("hide-ball");
+    this.ball.classList.add("hide-ball");
+    clearTimeout(pageGame.setWaveUp);
     pageGame.gameStart()
   } else if (!this.wave1.classList.contains("supportWave")) {
-    
     this.wave1.classList.add("supportWave");
     this.wave2.classList.remove("hide");
     this.ball.classList.add("hide-ball");
+    clearTimeout(pageGame.setWaveUp);
     pageGame.gameStart();
   } else if (!this.wave2.classList.contains("supportWave")) {
     this.wave2.classList.add("supportWave");
     this.wave3.classList.remove("hide");
     this.ball.classList.add("hide-ball");
-    finishGame();
+    modal.show();
+    
   } 
 }

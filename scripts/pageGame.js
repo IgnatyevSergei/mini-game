@@ -13,7 +13,7 @@ export class PageGameComponent extends Component {
       this.wrapper.insertAdjacentHTML("afterend", renderBall());
       window.calculationBall =
         document.getElementById("ball").dataset.calculation;
-      this.setWaveUp = setTimeout(wave.settingWave, 20000);
+      this.setWaveUp = setTimeout(wave.settingWave, 10000);
     };
 
     this.gameStart = () => {

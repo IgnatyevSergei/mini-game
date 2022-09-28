@@ -370,7 +370,7 @@
   align-items: center;
   justify-content: center;
   background-color: #61c9ff;
-  animation: ballDown 20s ease-in;
+  animation: ballDown 10s ease-in;
 }
 
 @keyframes ballDown {
@@ -405,30 +405,28 @@
   font-size: 2rem;
 }
 
-.hide-ball {
-  display: none;
-}
+
 
 /*======================= modal ================*/
-
 .modal-container {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #000000b3;
+  background-color: #857070b3;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 
 .modal__notice,
 .modal__notice-name {
   color: black;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 10px;
@@ -437,10 +435,11 @@
 
 .modal__actions{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: column;
   padding-top: 3%;
-  height: 20%;
+  height: 30%;
+  width: 10%;
     
 }
 
@@ -450,5 +449,17 @@
   background-color: grey;
   cursor: pointer;
   padding-top: 3;
+  
     
+}
+
+.modal__btn:hover{
+  transform: scale(1.15);
+  background-color: rgb(107, 135, 163);
+  font-style: oblique;
+}
+
+
+.hide-ball {
+  display: none;
 }

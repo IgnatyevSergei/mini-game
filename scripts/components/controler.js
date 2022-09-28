@@ -27,6 +27,8 @@ export class ControlComponent extends Component {
     this.enterBtn.addEventListener("click", enterNumberHandler.bind(this));
 
     this.curent = 0;
+
+    
   }
 }
 
@@ -60,5 +62,11 @@ function enterNumberHandler() {
     pageGame.gameStart();
     
     
+  } else {
+    if (this.score.value<=0) {
+      this.score.value = 0
+      this.curent = 0
+    } else{this.curent -= 10;
+    this.score.value = this.curent;} 
   }
 }
