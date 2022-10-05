@@ -15,31 +15,30 @@ export class ModalComponent extends Component {
 
     this.textScore = () => {
         this.component.querySelector(".modal__notice-name").innerHTML =
-          controler.score;
+          controler.curent;
     } 
+
+    this.clearSetting = () =>{
+      wave.wave0.classList.remove("supportWave");
+      wave.wave1.classList.remove("supportWave");
+      wave.wave2.classList.remove("supportWave");
+      wave.wave1.classList.add("hide");
+      wave.wave2.classList.add("hide");
+      wave.wave3.classList.add("hide");
+      controler.score.value = 0;
+      controler.curent = 0
+    }
   }
 }
 
 function newGameHandler() {
-  wave.wave0.classList.remove("supportWave");
-  wave.wave1.classList.remove("supportWave");
-  wave.wave2.classList.remove("supportWave");
-  wave.wave1.classList.add("hide");
-  wave.wave2.classList.add("hide");
-  wave.wave3.classList.add("hide");
-  controler.score.value = 0;
+  this.clearSetting()
   pageGame.gameStart();
   this.hide();
 }
 
 function exitGameHandler() {
-  wave.wave0.classList.remove("supportWave");
-  wave.wave1.classList.remove("supportWave");
-  wave.wave2.classList.remove("supportWave");
-  wave.wave1.classList.add("hide");
-  wave.wave2.classList.add("hide");
-  wave.wave3.classList.add("hide");
-  controler.score.value = 0;
+  this.clearSetting();
   pageGame.hide();
   this.hide()
   landingPage.show();

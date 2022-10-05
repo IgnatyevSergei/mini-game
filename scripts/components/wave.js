@@ -1,4 +1,4 @@
-import { modal, pageGame } from "../../script.js";
+import { controler, modal, pageGame } from "../../script.js";
 import { Component } from "../core/component.js";
 
 
@@ -45,6 +45,7 @@ this.ball = document.getElementById("ball");
     this.wave3.classList.remove("hide");
     this.ball.classList.add("hide-ball");
     modal.show();
+    modal.textScore()
     
   } 
 }
