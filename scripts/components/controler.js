@@ -26,9 +26,39 @@ export class ControlComponent extends Component {
     this.enterBtn = this.component.querySelector(".num_btn-enter");
     this.enterBtn.addEventListener("click", enterNumberHandler.bind(this));
 
+    window.addEventListener("keypress", pressButtonHandler.bind(this));
+
     this.curent = 0;
 
-    
+    this.pressBtnEffect = () => {
+      this.button.classList.add("pressBtn");
+      setTimeout(() => this.button.classList.remove("pressBtn"), 80);
+    };
+
+    this.enter = () => {
+      if (this.scoreboard.value === window.calculationBall) {
+        this.ball = document.getElementById("ball");
+        this.animation = document.getElementById("animation");
+        this.animation.classList.remove("hide");
+        this.animation.classList.add("img1");
+        setTimeout(()=> this.animation.classList.add("hide"), 500);
+        this.ball.classList.add("hide-ball");
+        this.scoreboard.value = "";
+        this.curent += 10;
+        this.score.value = this.curent;
+        clearTimeout(pageGame.setWaveUp);
+        setTimeout(pageGame.gameStart, 1000);
+      } else {
+        this.scoreboard.value = ''
+        if (this.score.value <= 0) {
+          this.score.value = 0;
+          this.curent = 0;
+        } else {
+          this.curent -= 10;
+          this.score.value = this.curent;
+        }
+      }
+    };
   }
 }
 
@@ -52,21 +82,19 @@ function clearNumberHandler() {
 }
 
 function enterNumberHandler() {
-  if (this.scoreboard.value === window.calculationBall) {
-    this.ball = document.getElementById("ball");
-    this.ball.classList.add("hide-ball");
+  this.enter();
+}
+
+function pressButtonHandler(e) {
+  this.button = document.querySelector(`button[data-key="${e.keyCode}"]`);
+  if (this.button.textContent == "enter") {
+    this.pressBtnEffect();
+    this.enter();
+  } else if (this.button.textContent == "clear") {
     this.scoreboard.value = "";
-    this.curent += 10;
-    this.score.value = this.curent;
-    clearTimeout(pageGame.setWaveUp);
-    pageGame.gameStart();
-    
-    
+    this.pressBtnEffect();
   } else {
-    if (this.score.value<=0) {
-      this.score.value = 0
-      this.curent = 0
-    } else{this.curent -= 10;
-    this.score.value = this.curent;} 
+    this.scoreboard.value += this.button.textContent;
+    this.pressBtnEffect();
   }
 }

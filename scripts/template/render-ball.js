@@ -15,14 +15,16 @@ export const renderBall = () => {
   );
 
   return `
-    <div style="left: ${position}%;" class="ball" id="ball" data-calculation = ${result} >
-            <div class="sign" id="sign">${
-              randomSign
-            }</div>
+    <div style="left: ${position}%" class = "ballWrapper";>
+          <div class="ball" id="ball" data-calculation = ${result} >
+            <div class="sign" id="sign">${randomSign}</div>
             <div class="numbers">
               <span class="number" id="numUp">${number1}</span>
               <span class="number" id="numDown">${number2}</span>
             </div>
-          </div>    
+          </div>
+           <img src="/assets/picture/Брызги пнг.png" class="hide" id="animation" alt=""> 
+    </div>    
+     
     `;
 };

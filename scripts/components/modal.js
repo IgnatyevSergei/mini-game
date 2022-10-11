@@ -26,6 +26,7 @@ export class ModalComponent extends Component {
       wave.wave2.classList.add("hide");
       wave.wave3.classList.add("hide");
       controler.score.value = 0;
+      controler.scoreboard.value = ''
       controler.curent = 0
     }
   }

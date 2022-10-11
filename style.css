@@ -7,6 +7,10 @@
   font-family: "Eczar", serif;
   font-size: 10px;
 }
+
+button:focus{
+  outline: none;
+}
 /* =============first page=============== */
 .page-start {
   height: 100vh;
@@ -117,6 +121,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  
 }
 
 .wave {
@@ -358,19 +363,26 @@
 
 /*======================= ball ================*/
 
+.ballWrapper{
+animation: ballDown 10s ease-in;
+height: 70px;
+width: 70px;
+position: absolute;
+ top: 0;
+  left: 13%;
+}
+
 .ball {
   height: 70px;
   width: 70px;
-  position: absolute;
-  top: 0;
-  left: 13%;
   border: 2px solid #4682b4;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #61c9ff;
-  animation: ballDown 10s ease-in;
+  
+ 
 }
 
 @keyframes ballDown {
@@ -462,4 +474,29 @@
 
 .hide-ball {
   display: none;
+}
+
+.pressBtn{
+  transform: scale(1.1);
+  transition: 0.08s ease;
+  background-color: #0ff;
+}
+
+.img1{
+  width: 100px;
+  height: 100px;
+  animation: spray 0.5s ease;
+  
+}
+
+
+@keyframes spray {
+  0% {
+    width: 0.5px;
+    height: 0.5px;
+  } 50% {
+    opacity: 0.8;
+  } 100% {
+    opacity: 0;
+  }
 }
